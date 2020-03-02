@@ -19,12 +19,18 @@ def selection_sort( arr ):
         for j in range(i + 1, len(arr)):
             if arr[j] < arr[smallest_index]:
                smallest_index = j
+               print('smallest index:', smallest_index)
 
         if smallest_index != i:
           swapped = arr[i]
+          print('swapped:', swapped)
           arr[i] = arr[smallest_index]
           arr[smallest_index] = swapped
     return arr
+
+arr_one = [ 1, 3, 2, 1, 4 ]
+selection_sort(arr_one)
+print(arr_one)
 
 
 # Loop through the entire array and compare the current value to the value to the right of it. If the current value is larger than the one to the right, swap them. Keep doing this until a swap does not happen.
